@@ -43,9 +43,13 @@
 			return false;
 		}
 	    if (!cv.v_confirm.value) {
-	        alert("유권자 확인 선택되지 않았습니다!");
+	        alert("유권자 확인 선택되지 않았습니다!")
 	        return false;
 	    }
+	}
+	function resetValue(){
+		alert("정보를 지우고 처음부터 다시 입력합니다!")
+		location.href="vote_input.jsp";
 	}
 </script>
 </head>
@@ -99,7 +103,7 @@
 				<tr>
 					<td colspan="2" align="center">
 						<input type="submit" value="투표하기"> 
-						<input type="reset" value="다시쓰기">
+						<input type="button" value="다시쓰기" onclick="return resetValue()">
 					</td>
 				</tr>
 
